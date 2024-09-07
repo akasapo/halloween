@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: black;
+  padding: 20px;
+  color: #333;
+}
+
+header {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+
+p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000; 
+  padding-bottom: 5px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url(hw1.png); /* ここに背景画像のURLを指定 */
+  background-size: cover; /* 画像全体が表示されるように設定 */
+  background-position: top; /* 画像の中央を基準に配置 */
+  background-repeat: no-repeat;
+  background-color: #333; /* 画像が読み込めない場合の背景色 */
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* 画像の上に薄い黒のオーバーレイ */
+}
+#ghost-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* ユーザーがクリックできないようにする */
+}
+
+#ghost {
+  position: absolute;
+  width: 100px; /* お化けの大きさ */
+  height: 100px;
+  opacity: 0; /* 最初は見えないようにする */
+  transition: transform 1s ease-in-out;
+}
+
+/* ワークショップのスタイル */
+#workshops {
+  margin-bottom: 20px;
+  background-color: #ff6600;
+}
+
+
+.workshop {
+  margin-bottom: 20px;
+}
+#workshop h2{
+  color: black;
+}
+.workshop-content {
+  display: flex;
+  align-items: center; /* 画像とテキストを垂直方向に中央揃え */
+  gap: 20px; /* 画像とテキストの間にスペースを追加 */
+}
+.workshop-content img {
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.workshop-content p {
+  max-width: 600px; /* テキストの最大幅を設定（必要に応じて調整） */
+}
+
+.workshop h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+/* ボタンのスタイリング */
+a {
+    color: inherit; /* リンクのテキストの色を親要素から継承させる */
+    text-decoration: none; /* リンクの下線を削除 */
+}
+.button-insta {
+  display: inline-block; /* ボタンをインラインブロックにする */
+  padding: 10px 20px; /* ボタン内の余白 */
+  font-size: 16px; /* フォントサイズ */
+  color: #fff !important;  /* テキストの色 */
+  background-color: #6f42c1; /* ボタンの背景色 */
+  text-decoration: none; /* 下線を消す */
+  border-radius: 5px; /* ボタンの角を丸くする */
+  border: 1px solid #6f42c1; /* ボタンの枠線の色 */
+  transition: background-color 0.3s, border-color 0.3s; /* ホバー時のアニメーション */
+  text-align: center; /* テキストを中央に配置 */
+}
+
+/* ホバー時のスタイル */
+.button-insta:hover {
+  background-color: #5a32a3;  /* ホバー時の背景色 */
+  border-color: #5a32a3;/* ホバー時の枠線の色 */
+  color: #fff !important;  /* ホバー時のテキストの色 */
+}
+
+
+/* 当日のルールスタイル */
+#event-rules ul {
+  margin-top: 10px;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+#map{
+  background-color: #ff6600;
+}
+
+/* 申し込み・お支払い方法のスタイル */
+#payment ol {
+  margin-top: 10px;
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+#payment a {
+  color: #ff6600;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#payment a:hover {
+  text-decoration: underline;
+}
+
+#contact{
+  background-color: #ff6600;
+}
+
+#registration .button {
+  display: inline-block;
+  background-color: #6f42c1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#registration .button:hover {
+  background-color: #5a32a3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 20px;
+}
