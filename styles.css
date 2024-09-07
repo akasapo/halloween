@@ -1,9 +1,11 @@
+/* 全体のスタイルリセット */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 全体のスタイル */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -12,6 +14,7 @@ body {
   color: #333;
 }
 
+/* ヘッダーのスタイル */
 header {
   color: white;
   padding: 20px;
@@ -24,12 +27,7 @@ h1 {
   font-size: 2.5rem;
 }
 
-
-p {
-  font-size: 1rem;
-  margin: 10px 0;
-}
-
+/* セクションのスタイル */
 section {
   margin-bottom: 20px;
   padding: 20px;
@@ -40,10 +38,11 @@ section {
 h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  border-bottom: 2px solid #000; 
+  border-bottom: 2px solid #000;
   padding-bottom: 5px;
 }
 
+/* リンクのスタイル */
 a {
   color: #333;
   text-decoration: none;
@@ -53,103 +52,108 @@ a:hover {
   text-decoration: underline;
 }
 
+/* アイキャッチ画像のスタイル */
 .img-container {
   position: relative;
   width: 100%;
-  height: 600px;
-  background-image: url(hw1.png); /* ここに背景画像のURLを指定 */
-  background-size: cover; /* 画像全体が表示されるように設定 */
-  background-position: top; /* 画像の中央を基準に配置 */
+  height:600px; /* 高さを調整 */
+  background-image: url(hw1.png);
+  background-size: cover;
+  background-position: center; /* 中央に配置 */
   background-repeat: no-repeat;
-  background-color: #333; /* 画像が読み込めない場合の背景色 */
+  background-color: #333;
   overflow: hidden;
 }
+
 .overlay {
   position: absolute;
-  top: 450px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 中央に配置 */
+  width: 90%; /* 幅を調整 */
   text-align: center;
   color: white;
-  background: rgba(0, 0, 0, 0.5); /* 画像の上に薄い黒のオーバーレイ */
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }
+
 #ghost-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: none; /* ユーザーがクリックできないようにする */
+  pointer-events: none;
 }
 
 #ghost {
   position: absolute;
-  width: 100px; /* お化けの大きさ */
+  width: 100px;
   height: 100px;
-  opacity: 0; /* 最初は見えないようにする */
+  opacity: 0;
   transition: transform 1s ease-in-out;
 }
 
-/* ワークショップのスタイル */
+/* ワークショップセクションのスタイル */
 #workshops {
-  margin-bottom: 20px;
   background-color: #ff6600;
 }
-
 
 .workshop {
   margin-bottom: 20px;
 }
-#workshop h2{
-  color: black;
-}
+
 .workshop-content {
   display: flex;
-  align-items: center; /* 画像とテキストを垂直方向に中央揃え */
-  gap: 20px; /* 画像とテキストの間にスペースを追加 */
+  align-items: center;
+  gap: 20px;
 }
+
 .workshop-content img {
-  margin-right: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .workshop-content p {
-  max-width: 600px; /* テキストの最大幅を設定（必要に応じて調整） */
+  max-width: 600px;
 }
+@media (max-width: 768px) {
+  .workshop-content {
+    flex-direction: column; /* 縦並びに変更 */
+text-align: center; /* テキストを中央に配置 */
+  }
+
+  
+  }
+
 
 .workshop h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
+
 /* ボタンのスタイリング */
 a {
-    color: inherit; /* リンクのテキストの色を親要素から継承させる */
-    text-decoration: none; /* リンクの下線を削除 */
+  color: inherit;
+  text-decoration: none;
 }
+
 .button-insta {
-  display: inline-block; /* ボタンをインラインブロックにする */
-  padding: 10px 20px; /* ボタン内の余白 */
-  font-size: 16px; /* フォントサイズ */
-  color: #fff !important;  /* テキストの色 */
-  background-color: #6f42c1; /* ボタンの背景色 */
-  text-decoration: none; /* 下線を消す */
-  border-radius: 5px; /* ボタンの角を丸くする */
-  border: 1px solid #6f42c1; /* ボタンの枠線の色 */
-  transition: background-color 0.3s, border-color 0.3s; /* ホバー時のアニメーション */
-  text-align: center; /* テキストを中央に配置 */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff !important;
+  background-color: #6f42c1;
+  border-radius: 5px;
+  border: 1px solid #6f42c1;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
 }
 
-/* ホバー時のスタイル */
 .button-insta:hover {
-  background-color: #5a32a3;  /* ホバー時の背景色 */
-  border-color: #5a32a3;/* ホバー時の枠線の色 */
-  color: #fff !important;  /* ホバー時のテキストの色 */
+  background-color: #5a32a3;
+  border-color: #5a32a3;
 }
-
 
 /* 当日のルールスタイル */
 #event-rules ul {
@@ -157,8 +161,17 @@ a {
   list-style-type: disc;
   margin-left: 20px;
 }
-#map{
+
+/* マップのスタイル */
+#map {
   background-color: #ff6600;
+  text-align: center; /* 中央に配置 */
+}
+
+#map iframe {
+  width: 100%; /* 幅を100%にする */
+  height: 400px; /* 高さを調整 */
+  border: 0;
 }
 
 /* 申し込み・お支払い方法のスタイル */
@@ -178,10 +191,12 @@ a {
   text-decoration: underline;
 }
 
-#contact{
+/* お問い合わせセクションのスタイル */
+#contact {
   background-color: #ff6600;
 }
 
+/* 参加申込のボタン */
 #registration .button {
   display: inline-block;
   background-color: #6f42c1;
@@ -196,10 +211,37 @@ a {
   background-color: #5a32a3;
 }
 
+/* フッターのスタイル */
 footer {
   text-align: center;
   padding: 20px;
   background-color: #333;
   color: white;
   margin-top: 20px;
+}
+
+/* メディアクエリでスマホ対応 */
+@media (max-width: 768px) {
+  .img-container {
+    height: 200px; /* 高さを調整 */
+  }
+  
+  .overlay h2 {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .workshop-content {
+    flex-direction: column; /* 縦並びに変更 */
+    text-align: center;
+  }
+
+  .workshop-content img {
+    width: 100%; /* 画像を幅いっぱいにする */
+    max-width: 300px; /* 最大幅を設定 */
+  }
+
+  #map iframe {
+    height: 300px; /* 高さを調整 */
+  }
 }
