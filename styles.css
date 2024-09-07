@@ -171,7 +171,10 @@ a {
 .map-img-container{
   text-align: center; /* 画像を中央に配置 */
   margin: 20px 0; /* 上下のマージンを追加 */
-  width: 100vw;
+  width: 100%; /* コンテナの幅を100%に設定 */
+  display: flex; /* Flexboxを使用して中央寄せ */
+  justify-content: center; /* 横方向の中央寄せ */
+  align-items: center; /* 縦方向の中央寄せ */
 }
 .map-img-container img {
     max-width: 100%; /* 画像がコンテナの幅を超えないようにする */
@@ -257,8 +260,10 @@ footer {
   }
   
   .overlay h2 {
-    font-size: 0.5rem;
+    font-size: 1rem; /* フォントサイズを調整（0.5rem より大きいが画面に収まるように） */
     padding: 10px;
+    line-height: 1.2; /* 行間を狭くしてテキストが収まりやすくする */
+    text-align: center;
   }
 
   .workshop-content {
@@ -266,12 +271,6 @@ footer {
     text-align: center;
   }
 
-  .workshop-content img {
-    width: 100%; /* 画像を幅いっぱいにする */
-    max-width: 300px; /* 最大幅を設定 */
-  }
 
-  #map iframe {
-    height: 300px; /* 高さを調整 */
-  }
+
 }
