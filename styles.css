@@ -171,6 +171,7 @@ a {
 .map-img-container{
   text-align: center; /* 画像を中央に配置 */
   margin: 20px 0; /* 上下のマージンを追加 */
+  width: 100%;
 }
 .map-img-container img {
     max-width: 100%; /* 画像がコンテナの幅を超えないようにする */
