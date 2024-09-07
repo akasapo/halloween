@@ -171,7 +171,7 @@ a {
 .map-img-container{
   text-align: center; /* 画像を中央に配置 */
   margin: 20px 0; /* 上下のマージンを追加 */
-  width: 100%;
+  width: 100vw;
 }
 .map-img-container img {
     max-width: 100%; /* 画像がコンテナの幅を超えないようにする */
@@ -186,7 +186,7 @@ a {
   }
   
   .map-img-container img {
-    width: 100%; /* スマホでは画像の幅をコンテナに合わせる */
+    width: 80vw; /* スマホでは画像の幅をコンテナに合わせる */
     height: auto; /* 高さは自動で調整 */
   }
 }
