@@ -232,11 +232,6 @@ a {
 }
 
 
-
-
-
-
-
 /* 申し込み・お支払い方法のスタイル */
 #payment ol {
   margin-top: 10px;
@@ -279,17 +274,12 @@ a {
 }
 .button-container {
   padding: 20px;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;  /* コンテナの幅は100% */
   max-width: 300px; /* コンテナの最大幅を設定 */
   margin: 0 auto;  /* 水平方向に中央寄せ */
   display: flex;  /* Flexboxを使用して中央寄せ */
   justify-content: center;  /* コンテナ内の要素を中央寄せ */
   align-items: center;
-
-  
-
 
 }
 #fixedButton {
