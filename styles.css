@@ -293,7 +293,7 @@ a {
   background-image: url('btnimg.png');
   background-size: cover; 
   width: 200px; /* 必要に応じて幅を調整 */
-    height: 200px;
+    height: 150px;
   color: white;
   border-radius: 5px;
   font-size: 1.2rem;
