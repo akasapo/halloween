@@ -286,23 +286,27 @@ a {
 }
 #fixedButton {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1px;
   z-index: 1000;
   display: none;  /* 最初は非表示 */
-  padding: 10px 20px;
-  background-color: #6f42c1;
+  padding: 10px 0px;
+  background-image: url('btnimg.png');
+  background-size: cover; 
+  width: 200px; /* 必要に応じて幅を調整 */
+    height: 200px;
   color: white;
   border-radius: 5px;
   font-size: 1.2rem;
   text-align: center;
-  width: 96vw;
-  max-width: 1000px; /* 最大幅を設定（必要に応じて調整） */
   box-sizing: border-box;
+  left: 50%;
+  transform: translateX(-50%);
+  
 
 }
+
 #fixedButton:hover {
-  background-color: #5a32a3;
+  background-image: url('btnimghover.png');
 }
 
 
