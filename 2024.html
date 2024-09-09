@@ -89,6 +89,11 @@
         </a>
       </p>
   </section>
+  <section id="movie2023">
+    <h2>昨年の様子</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/31Ftdr4TrtA?si=u8ataDylAZ6slK3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+</section>
   <section id="event-rules">
     <h2>当日のルール</h2>
     <p>安全かつ楽しいイベントを実施するために、以下のルールをお守りください:</p>
@@ -96,6 +101,12 @@
         <li>お菓子をもらう際は、各お店で「トリックオアトリート」と声をかけましょう。</li>
         <li>ワークショップの参加には順番待ちが発生する場合があります。スタッフの指示に従ってください。</li>
         <li>交通ルールは守り走らず、周りの方への配慮を忘れないようにしてください。</li>
+        <li>歩道を歩きましょう</li>
+        <li>車道を横断する際は、必ず横断歩道を利用しましょう</li>
+        <li>コスチュームによる視界の遮りに注意</li>
+        <li>混雑時のペースに配慮しましょう</li>
+        <li>ゴミは必ず持ち帰りましょう</li>
+        <li>万が一迷子になった場合や怪我をした場合は、すぐに近くのスタッフにお知らせください。</li>
     </ul>
 </section>
 
@@ -123,8 +134,53 @@
 <section id="registration">
   <h2>参加申込</h2>
   <p>ハロウィンイベントへの参加申込は下記のボタンから行えます。</p>
-  <a href="#" class="button">申込はこちらから</a>
+  <a href="#" class="button" id="fixedButton">申込はこちらから</a>
 </section>
+<section id="registration">
+  <h2>参加申込</h2>
+  <p>ハロウィンイベントへの参加申込は下記のボタンから行えます。</p>
+  <a href="#" class="button" id="realButton">申込はこちらから</a>
+</section>
+
+<div class="button-container">
+  <a href="#" class="button" id="fixedButton">申込はこちらから</a>
+</div><!-- 固定ボタン -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const fixedButton = document.getElementById('fixedButton');
+      const realButton = document.getElementById('realButton');
+
+      function toggleButton() {
+          const rect = realButton.getBoundingClientRect();
+          const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+          // ボタンが画面に入ったら固定ボタンを非表示にし、実際のボタンと合流
+          if (rect.top < windowHeight && rect.bottom > 0) {
+              fixedButton.style.display = 'none';  // 固定ボタンを非表示
+          } else {
+              fixedButton.style.display = 'block';  // 固定ボタンを表示
+          }
+      }
+
+      // デバウンス関数
+      function debounce(func, wait) {
+          let timeout;
+          return function () {
+              clearTimeout(timeout);
+              timeout = setTimeout(func, wait);
+          };
+      }
+
+      // スクロールとリサイズイベントにデバウンスを適用
+      const debouncedToggleButton = debounce(toggleButton, 100);
+      window.addEventListener('scroll', debouncedToggleButton);
+      window.addEventListener('resize', debouncedToggleButton);
+
+      // 初期表示チェック
+      toggleButton();
+  });
+</script>
+
 
 
     <section id="contact">
