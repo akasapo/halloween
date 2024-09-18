@@ -124,7 +124,7 @@ a:hover {
 
 /* ワークショップセクションのスタイル */
 #workshops {
-  background-color: #ff6600;
+  background-color: #ff5757;
 }
 
 .workshop {
@@ -170,19 +170,22 @@ a {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
-  color: #fff !important;
-  background-color: #6f42c1;
+  color: black;
+  background-color: #FFBD59;
   border-radius: 5px;
-  border: 1px solid #6f42c1;
+  border: 1px solid #FFBD59;
   transition: background-color 0.3s, border-color 0.3s;
   text-align: center;
 }
 
 .button-insta:hover {
-  background-color: #5a32a3;
-  border-color: #5a32a3;
+  background-color: #FFD580;
+  border-color: #FFD580;
 }
 /* 昨年の様子 */
+#movie2023{
+  background-color: #8c52ff;
+}
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9のアスペクト比を維持するため */
@@ -207,6 +210,7 @@ a {
   }
 }
 /* 当日のルールスタイル */
+
 #event-rules ul {
   margin-top: 10px;
   list-style-type: disc;
@@ -216,7 +220,7 @@ a {
 
 /* マップのスタイル */
 #map {
-  background-color: #ff6600;
+  background-color: #ff5757;
   text-align: center; /* 中央に配置 */
 }
 
@@ -249,35 +253,17 @@ a {
 
 
 /* 申し込み・お支払い方法のスタイル */
-#payment ol {
-  margin-top: 10px;
-  list-style-type: decimal;
-  margin-left: 20px;
-}
-
-#payment a {
-  color: #ff6600;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-#payment a:hover {
-  text-decoration: underline;
-}
-
-
-/* お問い合わせセクションのスタイル */
 
 #registration {
-  background-color: #ff6600;
+  background-color: white
 }
 
-/* 参加申込のボタン */
+/* 申込書のボタン */
 
 #registration .button {
   display: inline-block;
-  background-color: #6f42c1;
-  color: white;
+  background-color: #FFBD59;
+  color: black;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -286,7 +272,7 @@ a {
 }
 
 #registration .button:hover {
-  background-color: #5a32a3;
+  background-color: #FFD580;
 }
 .button-container {
   padding: 20px;
@@ -325,7 +311,12 @@ a {
   background-image: url('btnimghover.png');
 }
 
-
+#attention{
+  background-color: #8c52ff;
+}
+#contact{
+  background-color: #ff5757;
+}
 /* フッターのスタイル */
 footer {
   text-align: center;
