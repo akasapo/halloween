@@ -268,23 +268,22 @@ a {
   border-radius: 5px;
   font-size: 1.2rem;
   text-align: center;
-  width: 95vw;
+  width: 80vw;  /* ボタンの幅を80vwに設定 */
+  max-width: 600px;  /* 最大幅を設定 */
+  margin: 0 auto;  /* ボタンを中央に配置 */
+  box-sizing: border-box;  /* パディングやボーダーを含む幅を計算 */
 }
 
 #registration .button:hover {
   background-color: #FFD580;
 }
+
 .button-container {
-  padding: 20px;
-  background-color: #ff6600;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;  /* コンテナの幅は100% */
-  max-width: 300px; /* コンテナの最大幅を設定 */
-  margin: 0 auto;  /* 水平方向に中央寄せ */
   display: flex;  /* Flexboxを使用して中央寄せ */
   justify-content: center;  /* コンテナ内の要素を中央寄せ */
   align-items: center;
-
+  width: 100%;
+  max-width: 100%; /* コンテナの最大幅を画面全体に */
 }
 #fixedButton {
   position: fixed;
