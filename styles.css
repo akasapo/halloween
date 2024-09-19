@@ -96,6 +96,12 @@ a:hover {
   background-color: #333;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .img-container {
+    height: 300px; /* スマホ用に高さを縮小 */
+    background-size: contain; /* 画像が収まるように調整 */
+  }
+}
 
 /* ゴーストのスタイル */
 #ghost-container {
