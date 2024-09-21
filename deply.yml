@@ -13,3 +13,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Build
         run: echo "Building..."
+concurrency:
+  group: pages-deployment
+  cancel-in-progress: true
