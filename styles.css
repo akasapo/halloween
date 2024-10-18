@@ -2,6 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -65,6 +66,7 @@ section {
   padding: 20px;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 section h2 {
@@ -119,6 +121,24 @@ a:hover {
   height: 100px;
   opacity: 0;
   transition: transform 1s ease-in-out;
+}
+
+.ribbon {
+  background-color: orange; /* ハロウィンらしいオレンジ色 */
+  color: black; /* 注目を集めやすい黒い文字 */
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 15px; /* 少し大きめにして目立たせる */
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  border: 3px solid black; /* 黒い枠線で強調 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 影をつけて立体感を出す */
+  position: relative;
+  width: 98%;
+  z-index: 10;
 }
 
 /* ワークショップセクションのスタイル */
@@ -285,7 +305,7 @@ a:hover {
   z-index: 1000;
   display: none;
   padding: 10px 0px;
-  background-image: url('btnimg.png');
+  background-image: url('btnimg2.png');
   background-size: cover;
   width: 200px;
   height: 150px;
