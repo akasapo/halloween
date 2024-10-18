@@ -66,7 +66,7 @@ section {
   padding: 20px;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
+  position: relative;
 }
 
 section h2 {
@@ -130,15 +130,18 @@ a:hover {
   text-align: center;
   padding: 15px; /* 少し大きめにして目立たせる */
   font-weight: bold;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
   border: 3px solid black; /* 黒い枠線で強調 */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 影をつけて立体感を出す */
-  position: relative;
-  width: 98%;
-  z-index: 10;
+  width: 100%;
+  
+}
+#event-details h2{
+  margin-top: 60px; 
 }
 
 /* ワークショップセクションのスタイル */
