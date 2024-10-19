@@ -149,7 +149,7 @@ a:hover {
 
 /* イベント詳細のh2の上マージン */
 #event-details h2 {
-  margin-top: 60px; /* h2の上の余白 */
+  margin-top: 120px; /* h2の上の余白 */
 }
 
 /* ワークショップセクションのスタイル */
